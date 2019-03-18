@@ -1,0 +1,11 @@
+{
+  "name": "getdazy.com - Landing Page",
+  "version": 2,
+  "regions": ["sfo", "iad"],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ]
+}
