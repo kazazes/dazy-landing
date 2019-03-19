@@ -2,7 +2,6 @@ import pkg from './package'
 
 export default {
   mode: 'universal',
-
   /*
    ** Headers of the page
    */
@@ -19,6 +18,7 @@ export default {
       },
       { name: 'og:image', property: 'og:image', content: '/img/logo/og.png' }
     ],
+    script: [{ src: '/js/segment.js', async: true, defer: true }],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
@@ -54,12 +54,11 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt',
-    '@nuxtjs/pwa'
-  ],
-
+  modules: ['bootstrap-vue/nuxt', '@nuxtjs/pwa'],
+  bootstrapVue: {
+    bootstrapCSS: false, // or `css`
+    bootstrapVueCSS: false // or `bvCSS`
+  },
   /*
    ** Build configuration
    */

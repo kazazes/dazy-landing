@@ -10,7 +10,7 @@
           <a
             class="button--green clearbit-overlay"
             data-form-id="c8039df3-4f7c-40d4-a203-4e193d0c5465"
-            data-theme="default"
+            data-theme="none"
           >Sign Up</a>
         </div>
         <social/>
@@ -30,11 +30,24 @@ export default {
     Logo,
     Instafeed,
     social: SocialButtons
+  },
+  mounted() {
+    analytics.ready(() => {
+      fbq('track', 'ViewContent', { content_name: 'Homepage' })
+    })
+    analytics.on('form_submission', (event, properties, options) => {
+      fbq('track', 'CompleteRegistration')
+      ga('send', 'event', {
+        eventCategory: 'User',
+        eventAction: 'signup',
+        eventLabel: 'landing form'
+      })
+    })
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 .fixed-daisy {
   position: fixed;
   bottom: 0;
