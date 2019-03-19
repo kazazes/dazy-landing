@@ -46,6 +46,7 @@ export default {
         eventAction: 'signup',
         eventLabel: 'landing form'
       })
+      console.log(JSON.stringify([event, properties, options]))
     })
   }
 }
