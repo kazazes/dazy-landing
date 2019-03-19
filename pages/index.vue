@@ -6,9 +6,9 @@
         <h1 class="display-4 py-3">Flower for empowered females.</h1>
         <h2 class="display-5 py-4">(blossoming this spring)</h2>
         <script type="text/javascript" src="https://clearbitjs.com/v1/x/forms.js"></script>
-        <div class="links clearbit-overlay">
+        <div class="links">
           <a
-            class="button--green"
+            class="button--green clearbit-overlay"
             data-form-id="c8039df3-4f7c-40d4-a203-4e193d0c5465"
             data-theme="default"
           >Get Dazy</a>
