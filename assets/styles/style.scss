@@ -1,5 +1,8 @@
+@import '~/assets/styles/bootstrap-social.css';
+@import url('//fonts.googleapis.com/css?family=Montserrat:300,400');
 @import 'bootstrap/scss/bootstrap.scss';
 @import 'bootstrap-vue/src/index.scss';
+@import '@fortawesome/fontawesome-svg-core/styles.css';
 html {
     font-family: 'Montserrat';
     font-size: 16px;

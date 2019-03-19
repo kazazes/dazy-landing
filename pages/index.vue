@@ -25,6 +25,10 @@ import Logo from '~/components/Logo.vue'
 import Instafeed from '~/components/Instafeed.vue'
 import SocialButtons from '~/components/SocialButtons.vue'
 
+if (process.browser) {
+  require('~/assets/js/segment.js')
+}
+
 export default {
   components: {
     Logo,

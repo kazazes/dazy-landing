@@ -1,4 +1,6 @@
-import pkg from './package'
+import path from 'path'
+import PurgecssPlugin from 'purgecss-webpack-plugin'
+import glob from 'glob-all'
 
 export default {
   mode: 'universal',
@@ -18,22 +20,7 @@ export default {
       },
       { name: 'og:image', property: 'og:image', content: '/img/logo/og.png' }
     ],
-    script: [{ src: '/js/segment.js', async: true, defer: true }],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: '//fonts.googleapis.com/css?family=Montserrat:300,400'
-      },
-      {
-        rel: 'stylesheet',
-        href: '//use.fontawesome.com/releases/v5.7.2/css/all.css'
-      },
-      {
-        rel: 'stylesheet',
-        href: '/css/bootstrap-social.css'
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   /*
@@ -44,30 +31,47 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@fortawesome/fontawesome-svg-core/styles.css'],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/fontawesome.js'],
 
   /*
    ** Nuxt.js modules
    */
-  modules: ['bootstrap-vue/nuxt', '@nuxtjs/pwa'],
-  bootstrapVue: {
-    bootstrapCSS: false, // or `css`
-    bootstrapVueCSS: false // or `bvCSS`
-  },
+  modules: ['@nuxtjs/pwa'],
+  // bootstrapVue: {
+  //   bootstrapCSS: false, // or `css`
+  //   bootstrapVueCSS: false, // or `bvCSS`
+  //   componentPlugins: [],
+  //   directivePlugins: []
+  // },
   /*
    ** Build configuration
    */
   build: {
+    extractCSS: true,
+
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-      // Run ESLint on save
+    extend(config, { isDev }) {
+      if (!isDev) {
+        // Remove unused CSS using purgecss. See https://github.com/FullHuman/purgecss
+        // for more information about purgecss.
+        config.plugins.push(
+          new PurgecssPlugin({
+            paths: glob.sync([
+              path.join(__dirname, './pages/**/*.vue'),
+              path.join(__dirname, './layouts/**/*.vue'),
+              path.join(__dirname, './components/**/*.vue')
+            ]),
+            whitelist: ['html', 'body']
+          })
+        )
+      }
     }
   }
 }

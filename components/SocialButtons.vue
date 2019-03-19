@@ -2,17 +2,17 @@
   <div class="links social-links pt-5 pb-0 my-0">
     <a href="//instagram.com/get.dazy" target="_blank">
       <button type="button" class="btn btn-social btn-twitter">
-        <span class="fab fa-instagram"></span>@get.dazy
+        <font-awesome-icon :icon="['fab', 'instagram']"/>@get.dazy
       </button>
     </a>
     <a href="//facebook.com/getdazy" target="_blank">
       <button type="button" class="btn btn-social btn-facebook">
-        <span class="fab fa-facebook"></span>get.dazy
+        <font-awesome-icon :icon="['fab', 'facebook']"/>get.dazy
       </button>
     </a>
     <a href="mailto:info@getdazy.com">
       <button type="button" class="btn btn-social">
-        <span class="far fa-envelope"></span>info@getdazy.com
+        <font-awesome-icon icon="envelope"/>info@getdazy.com
       </button>
     </a>
   </div>
