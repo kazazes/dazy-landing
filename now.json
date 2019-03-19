@@ -1,5 +1,6 @@
 {
   "name": "getdazy.com - Landing Page",
+  "alias": ["getdazy.com"],
   "version": 2,
   "regions": ["sfo", "iad"],
   "builds": [
