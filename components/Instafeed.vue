@@ -4,6 +4,7 @@
       <!-- LightWidget WIDGET -->
       <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
       <iframe
+        title="@get.dazy on instagram"
         src="https://cdn.lightwidget.com/widgets/deb08b19468b5b8eb4966586762ba190.html"
         scrolling="no"
         allowtransparency="true"
@@ -13,8 +14,6 @@
     </div>
   </section>
 </template>
-<script>
-</script>
 <style>
 .instafeed-container {
   padding: 0 15px;
