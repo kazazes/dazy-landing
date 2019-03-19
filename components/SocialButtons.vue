@@ -1,5 +1,5 @@
 <template>
-  <div class="links social-links pt-5 pb-0 my-0">
+  <div class="links social-links py-3 my-0">
     <a href="//instagram.com/get.dazy" target="_blank">
       <button type="button" class="btn btn-social btn-twitter">
         <font-awesome-icon :icon="['fab', 'instagram']"/>@get.dazy
@@ -10,8 +10,13 @@
         <font-awesome-icon :icon="['fab', 'facebook']"/>get.dazy
       </button>
     </a>
+    <a href="//www.pinterest.com/getdazy/" target="_blank">
+      <button type="button" class="btn btn-social btn-pinterest">
+        <font-awesome-icon :icon="['fab', 'pinterest']"/>getdazy
+      </button>
+    </a>
     <a href="mailto:info@getdazy.com">
-      <button type="button" class="btn btn-social">
+      <button type="button" class="btn btn-social btn-email">
         <font-awesome-icon icon="envelope"/>info@getdazy.com
       </button>
     </a>
@@ -34,8 +39,12 @@ export default {
   }
 
   .btn-social:hover {
-    color: #fff !important;
+    color: #fff;
     text-decoration: none !important;
+  }
+
+  .btn-social.btn-email:hover {
+    color: darken($color: #212529, $amount: 30) !important;
   }
 }
 </style>
