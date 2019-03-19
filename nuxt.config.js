@@ -4,6 +4,7 @@ import glob from 'glob-all'
 
 export default {
   mode: 'universal',
+  modern: process.env.NODE_ENV === 'production',
   /*
    ** Headers of the page
    */
@@ -57,21 +58,20 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, { isDev }) {
-      if (!isDev) {
-        // Remove unused CSS using purgecss. See https://github.com/FullHuman/purgecss
-        // for more information about purgecss.
-        config.plugins.push(
-          new PurgecssPlugin({
-            paths: glob.sync([
-              path.join(__dirname, './pages/**/*.vue'),
-              path.join(__dirname, './layouts/**/*.vue'),
-              path.join(__dirname, './components/**/*.vue')
-            ]),
-            whitelist: ['html', 'body']
-          })
-        )
-      }
+    extend(config) {
+      // Remove unused CSS using purgecss. See https://github.com/FullHuman/purgecss
+      // for more information about purgecss.
+      config.plugins.push(
+        new PurgecssPlugin({
+          paths: glob.sync([
+            path.join(__dirname, './pages/**/*.vue'),
+            path.join(__dirname, './layouts/**/*.vue'),
+            path.join(__dirname, './components/**/*.vue')
+          ]),
+          whitelist: ['html', 'body'],
+          whitelistPatterns: [/cb/, /fa/]
+        })
+      )
     }
   }
 }
