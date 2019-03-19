@@ -7,19 +7,15 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: 'Dazy | Flower for empowered females.',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Flower for empowered females.'
-      },
-      {
-        hid: 'title',
-        name: 'title',
-        content: 'Dazy'
+        content:
+          'A wellness platform curated by women, for women, selling the best CBD and THC products on the market.'
       },
       { name: 'og:image', property: 'og:image', content: '/img/logo/og.png' }
     ],

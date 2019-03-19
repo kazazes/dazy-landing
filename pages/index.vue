@@ -5,22 +5,15 @@
         <logo/>
         <h1 class="display-4 py-3">Flower for empowered females.</h1>
         <h2 class="display-5 py-4">(blossoming this spring)</h2>
-        <div class="links">
-          <div
-            class="clearbit-form"
-            data-form-id="c8039df3-4f7c-40d4-a203-4e193d0c5465"
-            data-theme="default"
-          ></div>
+        <script type="text/javascript" src="https://clearbitjs.com/v1/x/forms.js"></script>
+        <div class="links clearbit-overlay">
           <a
-            href="#"
-            class="button--green clearbit-overlay"
+            class="button--green"
             data-form-id="c8039df3-4f7c-40d4-a203-4e193d0c5465"
             data-theme="default"
-          >Join the Sisterhood</a>
-          <a href="#" target="_blank" class="button--grey">Get Dazy</a>
+          >Get Dazy</a>
         </div>
       </div>
-      <img src="~/assets/a-daisy.svg" class="fixed-daisy">
     </section>
 
     <instafeed/>
