@@ -24,6 +24,14 @@ export default {
       {
         rel: 'stylesheet',
         href: '//fonts.googleapis.com/css?family=Montserrat:300,400'
+      },
+      {
+        rel: 'stylesheet',
+        href: '//use.fontawesome.com/releases/v5.7.2/css/all.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: '/css/bootstrap-social.css'
       }
     ]
   },

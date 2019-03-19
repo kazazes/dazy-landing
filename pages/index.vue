@@ -11,11 +11,11 @@
             class="button--green clearbit-overlay"
             data-form-id="c8039df3-4f7c-40d4-a203-4e193d0c5465"
             data-theme="default"
-          >Get Dazy</a>
+          >Sign Up</a>
         </div>
+        <social/>
       </div>
     </section>
-
     <instafeed/>
   </div>
 </template>
@@ -23,11 +23,13 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import Instafeed from '~/components/Instafeed.vue'
+import SocialButtons from '~/components/SocialButtons.vue'
 
 export default {
   components: {
     Logo,
-    Instafeed
+    Instafeed,
+    social: SocialButtons
   }
 }
 </script>
