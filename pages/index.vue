@@ -4,7 +4,7 @@
       <div>
         <logo/>
         <h1 class="display-4 py-3">Flower for empowered females.</h1>
-        <h2 class="display-5 py-4">(blossoming this spring)</h2>
+        <h2 class="display-5 py-4">(blossoming this summer)</h2>
         <script type="text/javascript" src="https://clearbitjs.com/v1/x/forms.js"></script>
         <div class="links">
           <a
