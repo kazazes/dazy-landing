@@ -1,6 +1,6 @@
 <template>
   <div class="links social-links py-3 my-0">
-    <a href="//instagram.com/get.dazy" target="_blank">
+    <a href="//instagram.com/getdazy" target="_blank">
       <button type="button" class="btn btn-social btn-twitter">
         <font-awesome-icon :icon="['fab', 'instagram']"/>@get.dazy
       </button>
